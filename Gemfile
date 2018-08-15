@@ -1,8 +1,9 @@
 source 'https://rubygems.org'
 
+
 gem 'dotenv-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.5.2'
+gem 'rails', '4.2.7.1'
 # Use sqlite3 as the database for Active Record
 # Use SCSS for stylesheets
 gem 'sass-rails'
@@ -42,7 +43,6 @@ gem "font-awesome-rails"
 gem "highcharts-rails"
 gem 'sinatra', :require => nil
 gem "sidekiq"
-gem "sucker_punch"
 gem "activerecord-import"
 gem "app_perf_rpm"
 gem "app_perf_agent"
@@ -54,6 +54,9 @@ gem "devise"
 gem "devise_invitable"
 gem "react-rails"
 gem 'vanilla-ujs'
+gem 'oj'
+gem 'roda'
+gem 'pluck_to_hash'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

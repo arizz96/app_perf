@@ -3,12 +3,11 @@ class MetricReporter < Reporter
 
   attr_accessor :host
 
-  def initialize(host, params, view_context)
+  def initialize(host, params)
     params[:period] ||= "minute"
 
     self.host = host
     self.params = params
-    self.view_context = view_context
   end
 
   def report_data
@@ -37,9 +36,7 @@ class MetricReporter < Reporter
       hash.push({ :name => label , :data => data, :id => "ID-#{label}" }) rescue nil
     end
 
-    deployments = @host
-      .organization
-      .deployments
+    deployments = Deployment
       .where("start_time BETWEEN :start AND :end OR end_time BETWEEN :start AND :end", :start => time_range.first, :end => time_range.last)
 
     {

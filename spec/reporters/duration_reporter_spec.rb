@@ -4,27 +4,12 @@ require 'spec_helper'
 
 describe DurationReporter do
 
-  # TODO: auto-generated
-  describe '#render' do
-    it 'works' do
-      application = create(:application)
-      
-      params = {}
-      view_context = double('view_context')
-      expect(view_context).to receive(:area_chart)
-      duration_reporter = DurationReporter.new(application, params, view_context)
-      duration_reporter.render
-    end
-  end
-
-  # TODO: auto-generated
   describe '#report_data' do
     it 'works' do
       application = create(:application)
 
       params = {}
-      view_context = double('view_context')
-      duration_reporter = DurationReporter.new(application, params, view_context)
+      duration_reporter = DurationReporter.new(application, params)
       result = duration_reporter.report_data
       expect(result).not_to be_nil
     end
